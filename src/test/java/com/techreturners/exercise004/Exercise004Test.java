@@ -51,7 +51,7 @@ public class Exercise004Test {
     }
 
     @Test
-    public void checkGetDateTimeWhenTimeIsSpecifiedWithDayRollOver() {
+    public void checkGetDateTimeWhenTimeIsSpecifiedWithRollOver() {
 
         Exercise004 ex004 = new Exercise004(LocalTime.of(23, 59, 59));
         LocalDateTime expected = LocalDateTime.of(31, Month.SEPTEMBER, 10, 1, 46, 39);

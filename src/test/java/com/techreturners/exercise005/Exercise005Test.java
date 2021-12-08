@@ -31,6 +31,7 @@ public class Exercise005Test {
     
     @Test
     public void checkPerfectUpperCaseSentenceIsAPangram() {
+        
         assertTrue(ex005.isPangram("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
     }
 
@@ -68,6 +69,27 @@ public class Exercise005Test {
     @Test
     public void checkSentenceWithNumbersIsAPangram() {
         assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
+    }
+
+    @Test
+    public void checkSentenceWithMixedUpperAndLowerCaseAndNumbersIsAPangram() {
+        assertTrue(ex005.isPangram("The fiVE 11 boXing wiZards Jump QuicklY 9001"));
+    }
+
+    @Test
+    public void checkPerfectLowerCaseSentenceWithDuplicatesIsAPangram() {
+        assertTrue(ex005.isPangram("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"));
+    }
+    
+    @Test
+    public void checkPerfectUpperCaseSentenceWithDuplicatesIsAPangram() {
+        
+        assertTrue(ex005.isPangram("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+    }
+
+    @Test
+    public void checkSentenceWithMixedUpperAndLowerCaseAndNumbersAndDuplicatesIsAPangram() {
+        assertTrue(ex005.isPangram("The fiVE 11 boXing wiZards Jump QuicklY 9001 The fiVE 11 boXing wiZards Jump QuicklY 9001"));
     }
 
 }
