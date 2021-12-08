@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
 
 import static org.junit.Assert.assertEquals;
@@ -20,7 +21,7 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecified() {
 
@@ -30,12 +31,30 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedWithDayRollOver() {
 
         Exercise004 ex004 = new Exercise004(LocalDateTime.of(2021, Month.JANUARY, 24, 23, 59, 59, 0));
         LocalDateTime expected = LocalDateTime.of(2052, Month.OCTOBER, 03, 1, 46, 39);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
+
+    @Test
+    public void checkGetDateTimeWhenTimeIsSpecified() {
+
+        Exercise004 ex004 = new Exercise004(LocalTime.of(0, 0, 0));
+        LocalDateTime expected = LocalDateTime.of(31, Month.SEPTEMBER, 9, 1, 46, 40);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
+
+    @Test
+    public void checkGetDateTimeWhenTimeIsSpecifiedWithDayRollOver() {
+
+        Exercise004 ex004 = new Exercise004(LocalTime.of(23, 59, 59));
+        LocalDateTime expected = LocalDateTime.of(31, Month.SEPTEMBER, 10, 1, 46, 39);
 
         assertEquals(expected, ex004.getDateTime());
     }

@@ -19,5 +19,4 @@ public class Exercise002 {
             return false;
         }
     }
-    
 }

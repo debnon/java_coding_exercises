@@ -1,20 +1,12 @@
 package com.techreturners.exercise003;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class Exercise003 {
 
 
     int getIceCreamCode(String iceCreamFlavour) {
-        // String [] iceCreamList;
-        // iceCreamList = iceCreamFlavours();
-        // for (String flavour : iceCreamList) {
-        //     if (flavour == "Chocolate") {
-        //         return 0;
-        //     } else if (flavour == "Chocolate") {
 
-        //     }
-        // }
         String flavour = iceCreamFlavour;
         if (flavour == "Pistachio") {
             return 0;
@@ -30,7 +22,6 @@ public class Exercise003 {
             return 5;
         }
         
-        // throw new UnsupportedOperationException(("You can delete this statement and add your code here."));
     }
 
     String[] iceCreamFlavours() {

@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class Exercise003Test {
 
     private Exercise003 ex003;
-
+    // perhaps reformat into dictionary? 
     @Before
     public void setup() {
         ex003 = new Exercise003();

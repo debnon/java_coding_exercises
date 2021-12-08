@@ -2,18 +2,30 @@ package com.techreturners.exercise004;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
 
 public class Exercise004 {
 
+    private long gigasecond = 1000000000;
+    private LocalDateTime currentDateTime;
+    
     public Exercise004(LocalDate date) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        currentDateTime = date.atStartOfDay();
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        currentDateTime = dateTime;
     }
 
+    public Exercise004(LocalTime time) {
+        LocalDate date = LocalDate.of(0, Month.JANUARY, 1); 
+        currentDateTime = time.atDate(date);
+    }
+
+
     public LocalDateTime getDateTime() {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        currentDateTime = currentDateTime.plusSeconds(gigasecond);
+        return currentDateTime;
     }
 }
