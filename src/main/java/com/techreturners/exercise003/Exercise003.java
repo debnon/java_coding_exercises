@@ -1,27 +1,24 @@
 package com.techreturners.exercise003;
 
-// import java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.*;
 
 public class Exercise003 {
 
 
     int getIceCreamCode(String iceCreamFlavour) {
+        String [] iceCreamList = iceCreamFlavours();
 
-        String flavour = iceCreamFlavour;
-        if (flavour == "Pistachio") {
-            return 0;
-        } else if (flavour == "Raspberry Ripple") {
-            return 1;
-        } else if (flavour == "Vanilla") {
-            return 2;
-        } else if (flavour == "Mint Chocolate Chip") {
-            return 3;
-        } else if (flavour == "Chocolate") {
-            return 4;
-        } else {
-            return 5;
+        int count = 0;
+        for (String flavour : iceCreamList) {
+            if (iceCreamFlavour.equals(flavour)){
+                return count;
+            }
+            count++;
         }
-        
+
+        return count;
     }
 
     String[] iceCreamFlavours() {
