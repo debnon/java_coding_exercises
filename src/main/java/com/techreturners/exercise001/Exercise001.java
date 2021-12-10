@@ -34,7 +34,7 @@ public class Exercise001 {
 
         int count = 0;
         for (User user : users) {
-            if (user.getType() == "Linux") {
+            if (user.getType().equals("Linux")) {
                 count++;
             }
         }
