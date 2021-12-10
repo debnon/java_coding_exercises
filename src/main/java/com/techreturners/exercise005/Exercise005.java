@@ -16,13 +16,14 @@ public class Exercise005 {
         for (int i = 0; i < input.length(); i++) {
             String letter = input.substring(i,i+1);
 
-            if (alphabet.containsKey(letter) && alphabet.get(letter) == 0) {
+            if (alphabet.containsKey(letter) && alphabet.get(letter).equals(0)) {
                 alphabet.put(letter, alphabet.get(letter) + 1);
             }
         }
 
-        for (int freq : alphabet.values()) {
-            if (freq == 0) {
+        for (Integer freq : alphabet.values()) {
+            
+            if (freq.equals(0)) {
                 return false;
             }
         }
