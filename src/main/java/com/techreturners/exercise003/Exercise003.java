@@ -1,11 +1,6 @@
 package com.techreturners.exercise003;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.stream.*;
-
 public class Exercise003 {
-
 
     int getIceCreamCode(String iceCreamFlavour) {
         String [] iceCreamList = iceCreamFlavours();
@@ -22,8 +17,8 @@ public class Exercise003 {
     }
 
     String[] iceCreamFlavours() {
-        String [] iceCreamList = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
-        return iceCreamList;
+
+        return new String[]{ "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
     }
 
 }
