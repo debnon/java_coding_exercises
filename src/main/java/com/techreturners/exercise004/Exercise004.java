@@ -7,10 +7,10 @@ import java.time.Month;
 
 public class Exercise004 {
 
-    private long gigasecond = 1000000000;
     private LocalDateTime currentDateTime;
     
     public Exercise004(LocalDate date) {
+
         currentDateTime = date.atStartOfDay();
     }
 
@@ -25,7 +25,12 @@ public class Exercise004 {
 
 
     public LocalDateTime getDateTime() {
-        currentDateTime = currentDateTime.plusSeconds(gigasecond);
+        final long GIGA_SECOND = 1000000000;
+        currentDateTime = currentDateTime.plusSeconds(GIGA_SECOND);
+        
         return currentDateTime;
     }
 }
+
+
+
