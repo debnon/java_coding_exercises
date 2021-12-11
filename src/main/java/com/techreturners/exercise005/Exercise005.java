@@ -7,7 +7,7 @@ public class Exercise005 {
 
     public boolean isPangram(String input) {
         Map<String, Integer> alphabet = new HashMap<String, Integer>(); 
-            
+        
         for (char c = 'A'; c <= 'Z'; c++) 
             alphabet.put(String.valueOf(c), 0);
 
